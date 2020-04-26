@@ -1,6 +1,6 @@
 import * as React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import stdStyle from 'react-syntax-highlighter/styles/hljs/atelier-forest-dark'
+import stdStyle from 'react-syntax-highlighter/dist/esm/styles/hljs/atelier-forest-dark'
 
 const hiStyles = {
   ...stdStyle,

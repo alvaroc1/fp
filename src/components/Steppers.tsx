@@ -11,7 +11,7 @@ export const steppersSize = (elements: Steppers) =>
   Object.values(elements).reduce((acc,i) => acc + i.size, 0)
 
 export const renderSteppers = <E extends Steppers>(elements: E, current: number) => {
-  const [renderedElems, _] = Object.keys(elements).reduce(([acc,handled], key) => {
+  const [renderedElems, ] = Object.keys(elements).reduce(([acc,handled], key) => {
     const el = elements[key]
     const curIdx = current - handled
 
@@ -28,7 +28,7 @@ export const renderSteppers = <E extends Steppers>(elements: E, current: number)
   return renderedElems as RenderedSteppers<E>
 }
 
-
+/*
 export namespace Steppers {
 
   export const render = <E extends Steppers,R>(elements: E, current: number) => {
@@ -36,7 +36,7 @@ export namespace Steppers {
       const el = elements[key]
       const curIdx = (current - 1) - handled
   
-      const step = curIdx < 0 || curIdx >= el.size ? null : curIdx
+      const step = curIdx < 0 || curIdx >= el.size ? el.size - 1 : curIdx
   
       return [
         ({...acc, [key]: el.render(step, curIdx >= 0)}), 
@@ -50,5 +50,5 @@ export namespace Steppers {
   export const size = (elements: Steppers) => Object.values(elements).reduce((acc,i) => acc + i.size, 0)
 
 }
-
+*/
 export default Steppers

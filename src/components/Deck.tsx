@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Slide from './Slide'
+import Slide from './SlideData'
 import ReactMarkdown from 'react-markdown'
 import { WithStyles, createStyles, withStyles } from '@material-ui/styles'
 import { useTransition, animated } from 'react-spring'
@@ -70,10 +70,9 @@ interface DeckProps extends WithStyles<typeof styles> {
 
 export default withStyles(styles)((props: DeckProps) => {
   const [currentPos, setCurrentPos] = React.useState(0)
-  const [currentSlideComponent, setCurrentSlideComponent] = React.useState(0)
   const [forward, setForward] = React.useState(true)
   const [presentationSize, setPresentationSize] = React.useState<[number,number]>([0,0])
-  const presentationRef = React.useRef(null)
+  const presentationRef = React.useRef<HTMLDivElement>(null)
 
   const findSlidePos = (slideIdx: number) => {
     const go = (sIdx: number, slides: Slide[]): number => {
@@ -105,21 +104,21 @@ export default withStyles(styles)((props: DeckProps) => {
     }
   }
   const requestFullcreen = () => {
-    presentationRef.current.requestFullscreen()
+    presentationRef.current!.requestFullscreen()
   }
 
-  const handleResize = (ev: UIEvent) => {
+  const handleResize = (_: UIEvent) => {
     setPresentationSize([
-      presentationRef.current.clientWidth, 
-      presentationRef.current.clientHeight
+      presentationRef.current?.clientWidth ?? 0, 
+      presentationRef.current?.clientHeight ?? 0
     ])
   }
 
 
   React.useEffect(() => {
     setPresentationSize([
-      presentationRef.current.clientWidth, 
-      presentationRef.current.clientHeight
+      presentationRef.current?.clientWidth ?? 0, 
+      presentationRef.current?.clientHeight ?? 0
     ])
   }, [])
 

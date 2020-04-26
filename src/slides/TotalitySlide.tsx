@@ -1,12 +1,12 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
+import SlideData from '../components/SlideData'
 import Background from '../parts/Background'
 import Stepper from '../components/Stepper'
 import Snippet from '../components/Snippet'
 import { readFileSync } from 'fs'
 import Base from '../parts/Base'
 
-export default Slide.create({
+export default SlideData.create({
   background: <Background/>,
   elements: {
     code: Stepper.states(['desc', 'code-bad', 'code-good', 'code-good2', 'code-good3'], (value, active) => {

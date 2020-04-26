@@ -1,16 +1,17 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
-import Background from '../parts/Background'
+import SlideData from '../components/SlideData'
 import Heading from '../ui/Heading'
 import Center from '../layout/Center'
+import Base from '../parts/Base'
 
-export default Slide.create({
-  background: <Background/>,
+export default SlideData.create({
   elements: {},
-  render: elements => 
-    <Center>
-      <Heading>But the World is Impure!</Heading>
-    </Center>,
+  render: _ => 
+    <Base>
+      <Center>
+        <Heading>But the World is Impure!</Heading>
+      </Center>
+    </Base>,
   notes: `
     Ultimately we have to do some impure things.
 

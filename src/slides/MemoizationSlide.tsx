@@ -1,11 +1,11 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
+import SlideData from '../components/SlideData'
 import Base from '../parts/Base'
 import Background from '../parts/Background'
 import Snippet from '../components/Snippet'
 import { readFileSync } from 'fs'
 
-export default Slide.create({
+export default SlideData.create({
   background: <Background/>,
   elements: {
 

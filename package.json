@@ -1,26 +1,32 @@
 {
   "name": "presentation2",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel serve src/index.html",
+    "build": "parcel build src/index.html"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.9.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "parcel": "^2.0.0-nightly.234",
     "typescript": "^3.8.3"
   },
   "dependencies": {
     "@material-ui/styles": "^4.9.10",
     "@types/common-tags": "^1.8.0",
     "@types/node": "^13.13.2",
-    "@types/react": "^16.9.34",
+    "@types/react": "^16.8.6",
     "@types/react-dom": "^16.9.6",
+    "@types/react-syntax-highlighter": "^11.0.4",
     "common-tags": "^1.8.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "global": "^4.4.0",
+    "react": ">= 0.14.0",
+    "react-dom": ">= 16.8.0",
     "react-markdown": "^4.3.1",
     "react-spring": "^8.0.27",
-    "react-syntax-highlighter": "9.0.1",
+    "react-syntax-highlighter": "^12.2.1",
     "typeface-clear-sans": "^0.0.44",
     "typeface-montserrat": "^0.0.75",
     "typeface-roboto": "^0.0.75",

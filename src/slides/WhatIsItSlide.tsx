@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Slide from "../components/Slide"
+import SlideData from "../components/SlideData"
 import Stepper from "../components/Stepper"
 import Background from '../parts/Background'
 import Center from '../layout/Center'
@@ -14,7 +14,7 @@ const possibilities = [
   'Beautiful Code?'
 ]
 
-export default Slide.create({
+export default SlideData.create({
   background: <Background/>,
   elements: {
     possible: Stepper.arrayStates(possibilities, [false, true], (v, crossed, active) => 

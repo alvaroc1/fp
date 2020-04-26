@@ -1,9 +1,8 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
+import SlideData from '../components/SlideData'
 import { createStyles, withStyles, WithStyles } from '@material-ui/styles'
 import 'typeface-roboto'
 import 'typeface-montserrat'
-import Background from '../parts/Background'
 import Center from '../layout/Center'
 
 const styles = createStyles({
@@ -45,8 +44,7 @@ const Quote = withStyles(styles)((props: QuoteProps) =>
   </figure>
 )
 
-export default Slide.create({
-  background: <Background/>,
+export default SlideData.create({
   elements: {},
   render: () => 
     <Center>

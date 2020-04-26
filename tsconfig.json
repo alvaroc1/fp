@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-    "strict": false,
+    "strict": true,
     "module": "CommonJS",
     "jsx": "react",
     "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
 
     // false if source maps are disabled
     "sourceMap": true,
     "noEmit": false,
-    "lib": [ "es6", "dom", "es2017.object", "es2019.object" ]
+    "lib": [ "dom", "es2019.object", "es2017.object", "es6" ]
   }
 }

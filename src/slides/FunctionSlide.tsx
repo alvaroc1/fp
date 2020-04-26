@@ -1,11 +1,10 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
+import SlideData from '../components/SlideData'
 import Background from '../parts/Background'
 import Stepper from '../components/Stepper'
 import Base from '../parts/Base'
-import Center from '../layout/Center'
 
-export default Slide.create({
+export default SlideData.create({
   background: <Background/>,
   elements: {
     func: Stepper.show(<h1 style={{fontSize: 80, lineHeight: 2.2}}>Input → Output</h1>),

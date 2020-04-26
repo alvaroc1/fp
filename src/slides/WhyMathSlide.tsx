@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
+import SlideData from '../components/SlideData'
 import Background from '../parts/Background'
 import Stepper from '../components/Stepper'
 import Base from '../parts/Base'
@@ -10,7 +10,7 @@ const reasons = [
   "Tools: Laws, Proofs, Methods, etc",
 ]
 
-export default Slide.create({
+export default SlideData.create({
   background: <Background/>,
   elements: {
     reasons: Stepper.array(reasons, (v, active) => active && <div>{v}</div>)

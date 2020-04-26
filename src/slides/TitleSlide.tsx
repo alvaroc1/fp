@@ -1,8 +1,8 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
-import Background from '../parts/Background'
+import SlideData from '../components/SlideData'
 import 'typeface-montserrat'
 import Center from '../layout/Center'
+import Base from '../parts/Base'
 
 const styles: React.CSSProperties = {
   boxSizing: 'border-box',
@@ -12,13 +12,13 @@ const styles: React.CSSProperties = {
   textAlign: 'center'
 }
 
-export default Slide.create({
-  background: 
-    <Background/>,
+export default SlideData.create({
   elements: {},
   render: () => 
-    <Center>
-      <h1 style={styles}>Functional Programming</h1>
-    </Center>,
+    <Base>
+      <Center>
+        <h1 style={styles}>Functional Programming</h1>
+      </Center>
+    </Base>,
   notes: `Hello`
 })

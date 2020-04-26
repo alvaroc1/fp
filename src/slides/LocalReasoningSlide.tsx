@@ -1,9 +1,9 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
+import SlideData from '../components/SlideData'
 import Base from '../parts/Base'
 import Background from '../parts/Background'
 
-export default Slide.create({
+export default SlideData.create({
   background: <Background/>,
   elements: {
 

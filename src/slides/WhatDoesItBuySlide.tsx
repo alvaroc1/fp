@@ -1,16 +1,17 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
-import Background from '../parts/Background'
+import SlideData from '../components/SlideData'
 import Heading from '../ui/Heading'
 import Center from '../layout/Center'
+import Base from '../parts/Base'
 
-export default Slide.create({
-  background: <Background/>,
+export default SlideData.create({
   elements: {},
-  render: elements => 
-    <Center>
-      <Heading>What does it buy us?</Heading>
-    </Center>,
+  render: _ => 
+    <Base>
+      <Center>
+        <Heading>What does it buy us?</Heading>
+      </Center>
+    </Base>,
   notes: `
     So, that seems very limitting. We are having to give up a lot of things, so
     the upside must be pretty good.

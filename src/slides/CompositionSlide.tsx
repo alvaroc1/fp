@@ -1,7 +1,6 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
+import SlideData from '../components/SlideData'
 import Base from '../parts/Base'
-import Background from '../parts/Background'
 import Stepper from '../components/Stepper'
 import { readFileSync } from 'fs'
 import Snippet from '../components/Snippet'
@@ -14,8 +13,7 @@ const codeStyle: React.CSSProperties = {
   whiteSpace: 'pre'
 }
 
-export default Slide.create({
-  background: <Background/>,
+export default SlideData.create({
   elements: {
     values: Stepper.states(['desc1', 'desc2', 'code', 'commutative', 'associative', ], (v, active, past) => 
       active && ({
