@@ -1,35 +1,55 @@
 import * as React from 'react'
 import SlideData from '../components/SlideData'
-import Background from '../parts/Background'
 import Base from '../parts/Base'
 import Stepper from '../components/Stepper'
 import Snippet from '../components/Snippet'
 import { readFileSync } from 'fs'
 
+const badCode = readFileSync(__dirname + '/../snippets/purity-bad.sc', 'utf8')
+const goodCode1 = readFileSync(__dirname + '/../snippets/purity-good1.sc', 'utf8')
+const goodCode2 = readFileSync(__dirname + '/../snippets/purity-good2.sc', 'utf8')
+
+const options = {
+  bad:
+    <Snippet 
+      fontSize={26}
+      code={badCode} 
+      language='scala'/>,
+  good1:  
+    <Snippet 
+      fontSize={26}
+      code={goodCode1} 
+      language='scala'/>,
+  good2:  
+    <Snippet 
+      fontSize={26}
+      code={goodCode2} 
+      language='scala'/>
+}
+
 export default SlideData.create({
-  background: <Background/>,
   elements: {
     values: Stepper.array([
       'No writing to file',
       'No displaying stuff on the screen',
       'No updating something outside the function',
     ], (v, active, past) => active && !past && <div>{v}</div>),
-    code: Stepper.states(['bad', 'good1', 'good2'], (v, active) => 
+    code: Stepper.states(Object.keys(options) as any as Array<keyof typeof options>, (v, active) => 
       active && ({
         bad:
           <Snippet 
             fontSize={26}
-            code={readFileSync(__dirname + '/../snippets/purity-bad.sc', 'utf8')} 
+            code={badCode} 
             language='scala'/>,
         good1:  
           <Snippet 
             fontSize={26}
-            code={readFileSync(__dirname + '/../snippets/purity-good1.sc', 'utf8')} 
+            code={goodCode1} 
             language='scala'/>,
         good2:  
           <Snippet 
             fontSize={26}
-            code={readFileSync(__dirname + '/../snippets/purity-good2.sc', 'utf8')} 
+            code={goodCode2} 
             language='scala'/>
       })[v]
     )

@@ -1,11 +1,9 @@
 import * as React from 'react'
 import SlideData from '../components/SlideData'
 import Base from '../parts/Base'
-import Background from '../parts/Background'
 import Stepper from '../components/Stepper'
 
 export default SlideData.create({
-  background: <Background/>,
   elements: {
     done: Stepper.array(
       [true], (_, active, past) => 

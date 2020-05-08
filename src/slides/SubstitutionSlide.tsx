@@ -1,11 +1,15 @@
 import * as React from 'react'
 import SlideData from '../components/SlideData'
 import Base from '../parts/Base'
-import Background from '../parts/Background'
 import Stepper from '../components/Stepper'
 import { readFileSync } from 'fs'
 import Snippet from '../components/Snippet'
 import { stripIndent } from 'common-tags'
+
+const code1 = readFileSync(__dirname + '/../snippets/substitution1.sc', 'utf8')
+const code2 = readFileSync(__dirname + '/../snippets/substitution2.sc', 'utf8')
+const code3 = readFileSync(__dirname + '/../snippets/substitution3.sc', 'utf8')
+const code4 = readFileSync(__dirname + '/../snippets/substitution4.sc', 'utf8')
 
 const codeStyle: React.CSSProperties = {
   background: 'rgba(0,0,0,.4)',
@@ -14,69 +18,60 @@ const codeStyle: React.CSSProperties = {
   whiteSpace: 'pre'
 }
 
+const options = {
+  desc: 
+    <div style={{fontSize: 30}}>
+      <p>
+        An expression may be replaced by the value it computes without changing 
+        the behavior of the program
+      </p>
+    </div>,
+  substitution: 
+    <div style={{fontSize: 30}}>
+      <h3>Substitution</h3>
+      <code style={codeStyle}>{stripIndent`
+        2 * 3 + 4
+          6   + 4
+            10
+      `}</code>
+    </div>,
+
+  code1: 
+    <div style={{fontSize: 30}}>
+      <h3>Substitution</h3>
+      <Snippet
+        language='scala'
+        code={code1}  />
+    </div>,
+  code2: 
+    <div style={{fontSize: 30}}>
+      <h3>Substitution</h3>
+      <Snippet
+        language='scala'
+        code={code2}  />
+
+    </div>,
+  code3: 
+    <div style={{fontSize: 30}}>
+      <h3>Substitution</h3>
+      <Snippet
+        language='scala'
+        code={code3}  />
+    </div>,
+  code4: 
+    <div style={{fontSize: 30}}>
+      <h3>Substitution</h3>
+      <Snippet
+        language='scala'
+        code={code4}  />
+    </div>,
+}
+
 export default SlideData.create({
-  background: <Background/>,
   elements: {
-    values: Stepper.states([
-      'desc', 
-      'substitution',
-      /*
-      'commutative', 
-      'associative', 
-      */
-      'code1', 
-      'code2', 
-      'code3', 
-      'code4'
-    ], (v, active, past) => 
-      active && ({
-        desc: 
-          <div style={{fontSize: 30}}>
-            <p>
-              An expression may be replaced by the value it computes without changing 
-              the behavior of the program
-            </p>
-          </div>,
-        substitution: 
-          <div style={{fontSize: 30}}>
-            <h3>Substitution</h3>
-            <code style={codeStyle}>{stripIndent`
-              2 * 3 + 4
-                6   + 4
-                  10
-            `}</code>
-          </div>,
-
-        code1: 
-          <div style={{fontSize: 30}}>
-            <h3>Substitution</h3>
-            <Snippet
-              language='scala'
-              code={readFileSync(__dirname + '/../snippets/substitution1.sc', 'utf8')}  />
-          </div>,
-        code2: 
-          <div style={{fontSize: 30}}>
-            <h3>Substitution</h3>
-            <Snippet
-              language='scala'
-              code={readFileSync(__dirname + '/../snippets/substitution2.sc', 'utf8')}  />
-
-          </div>,
-        code3: 
-          <div style={{fontSize: 30}}>
-            <h3>Substitution</h3>
-            <Snippet
-              language='scala'
-              code={readFileSync(__dirname + '/../snippets/substitution3.sc', 'utf8')}  />
-          </div>,
-        code4: 
-          <div style={{fontSize: 30}}>
-            <h3>Substitution</h3>
-            <Snippet
-              language='scala'
-              code={readFileSync(__dirname + '/../snippets/substitution4.sc', 'utf8')}  />
-          </div>,
-      })[v]
+    values: Stepper.objectStates(
+      options, 
+      (v, active) => active && v
     )
   },
   render: elements => 

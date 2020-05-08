@@ -1,7 +1,8 @@
 import * as React from 'react'
 import ReactDOM from 'react-dom'
 import Deck from './components/Deck'
-import TitleSlide from './slides/TitleSlide'
+
+import TitleSlide from './slides/TitleSlide' /*
 import DanielQuoteSlide from './slides/DanielQuoteSlide'
 import MathSlide from './slides/MathSlide'
 import WhatIsItSlide from './slides/WhatIsItSlide'
@@ -22,11 +23,12 @@ import DeclarativeVsImperativeSlide from './slides/DeclarativeVsImperative'
 import IslandsSlide from './slides/IslandsSlide'
 import DoBeDoBeDoSlide from './slides/DoBeDoBeDoSlide'
 import PureOnTheInsideSlide from './slides/PureOnTheInsideSlide'
+*/
 
 const Presentation = () => 
   <Deck
     slides={[
-      TitleSlide,
+      TitleSlide/*,
       DanielQuoteSlide,
       WhatIsItSlide,
       MathSlide,
@@ -46,7 +48,7 @@ const Presentation = () =>
       DoBeDoBeDoSlide,
       DeclarativeVsImperativeSlide,
       IslandsSlide,
-      PureOnTheInsideSlide
+      PureOnTheInsideSlide*/
     ]}/>
 
 ReactDOM.render(

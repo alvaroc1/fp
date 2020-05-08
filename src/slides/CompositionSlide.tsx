@@ -4,7 +4,6 @@ import Base from '../parts/Base'
 import Stepper from '../components/Stepper'
 import { readFileSync } from 'fs'
 import Snippet from '../components/Snippet'
-import { stripIndent } from 'common-tags'
 
 const codeStyle: React.CSSProperties = {
   background: 'rgba(0,0,0,.4)',
@@ -13,40 +12,44 @@ const codeStyle: React.CSSProperties = {
   whiteSpace: 'pre'
 }
 
+const code = readFileSync(__dirname + '/../snippets/composition.sc', 'utf8')
+
+const options = {
+  desc1: 
+    <p style={{fontSize: 30}}>
+      Take 2 functions and produce a new function that pipes the output of the first 
+      function into the input of the second.
+    </p>,
+  desc2: 
+    <p style={{fontSize: 30}}>
+      Combining small parts to produce a bigger part.
+    </p>,
+  commutative: 
+    <div style={{fontSize: 30}}>
+      <h3>Commutative Property</h3>
+      <code style={codeStyle}>
+        (a + b) = (b + a)
+      </code>
+    </div>,
+  associative:
+    <div style={{fontSize: 30}}>
+      <h3>Associative Property</h3>
+      <code style={codeStyle}>
+        (a + b) + c = a + (b + c)
+      </code>
+    </div>,
+  code:
+    <div style={{fontSize: 30}}>
+      <Snippet
+        language='scala'
+        code={code} />
+    </div>,
+}
+
 export default SlideData.create({
   elements: {
-    values: Stepper.states(['desc1', 'desc2', 'code', 'commutative', 'associative', ], (v, active, past) => 
-      active && ({
-        desc1: 
-          <p style={{fontSize: 30}}>
-            Take 2 functions and produce a new function that pipes the output of the first 
-            function into the input of the second.
-          </p>,
-        desc2: 
-          <p style={{fontSize: 30}}>
-            Combining small parts to produce a bigger part.
-          </p>,
-        commutative: 
-          <div style={{fontSize: 30}}>
-            <h3>Commutative Property</h3>
-            <code style={codeStyle}>
-              (a + b) = (b + a)
-            </code>
-          </div>,
-        associative:
-          <div style={{fontSize: 30}}>
-            <h3>Associative Property</h3>
-            <code style={codeStyle}>
-              (a + b) + c = a + (b + c)
-            </code>
-          </div>,
-        code:
-          <div style={{fontSize: 30}}>
-            <Snippet
-              language='scala'
-              code={readFileSync(__dirname + '/../snippets/composition.sc', 'utf8')} />
-          </div>,
-      })[v]
+    values: Stepper.states(Object.keys(options) as any as Array<keyof typeof options>, (v, active) => 
+      active && options[v]
     )
   },
   render: elements => 

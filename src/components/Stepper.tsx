@@ -54,6 +54,14 @@ class Stepper {
     values.length,
     (current, active, past) => fn(values[current], active, past)
   )
+
+  static objectStates = <A,> (
+    values: {[key: string]: A},
+    fn: (value: A, active: boolean, past?: boolean) => React.ReactNode
+  ): Stepper => Stepper.states(
+    Object.keys(values) as any as Array<keyof typeof values>,
+    (current, active, past) => fn(values[current], active, past)
+  )
 }
 
 export default Stepper
