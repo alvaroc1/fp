@@ -1,16 +1,16 @@
 {
   "name": "presentation2",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "dist/main/index.html",
   "license": "MIT",
   "scripts": {
-    "start": "parcel serve src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel serve src/index.html --target browser",
+    "build": "parcel build src/index.html --target browser"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.9.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "parcel": "^2.0.0-nightly.234",
+    "parcel": "^2.0.0-nightly.164",
     "typescript": "^3.8.3"
   },
   "dependencies": {
