@@ -18,17 +18,14 @@
     "@types/node": "^13.13.2",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
-    "@types/react-syntax-highlighter": "10.1.0",
     "common-tags": "^1.8.0",
     "global": "^4.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
     "react-spring": "^8.0.27",
-    "react-syntax-highlighter": "9.0.1",
     "typeface-clear-sans": "^0.0.44",
     "typeface-montserrat": "^0.0.75",
-    "typeface-roboto": "^0.0.75",
-    "ui": "^0.2.4"
+    "typeface-roboto": "^0.0.75"
   }
 }
