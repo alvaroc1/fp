@@ -1,12 +1,12 @@
 import * as React from 'react'
-import SlideData from '../components/SlideData'
+import SlideData from '@alvaroc1/present/components/SlideData'
 import Base from '../parts/Base'
 import func from '../images/func.png'
 import error from '../images/error.png'
 import state from '../images/state.png'
 import effect from '../images/effect.png'
-import Stepper from '../components/Stepper'
-import Center from '../layout/Center'
+import Stepper from '@alvaroc1/present/components/Stepper'
+import Center from '@alvaroc1/present/layout/Center'
 
 export default SlideData.create({
   elements: {

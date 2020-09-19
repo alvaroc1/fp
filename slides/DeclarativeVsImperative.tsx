@@ -1,5 +1,5 @@
 import * as React from 'react'
-import SlideData from '../components/SlideData'
+import SlideData from '@alvaroc1/present/components/SlideData'
 import Base from '../parts/Base'
 import Background from '../parts/Background'
 

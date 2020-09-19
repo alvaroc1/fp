@@ -1,6 +1,6 @@
 import * as React from 'react'
 import ReactDOM from 'react-dom'
-import Deck from './components/Deck'
+import Deck from '@alvaroc1/present/components/Deck'
 
 import TitleSlide from './slides/TitleSlide'
 import DanielQuoteSlide from './slides/DanielQuoteSlide'
@@ -28,6 +28,8 @@ import Composition2Slide from './slides/Composition2Slide'
 
 const Presentation = () => 
   <Deck
+    width={800}
+    height={600}
     slides={[
       TitleSlide,
       DanielQuoteSlide,

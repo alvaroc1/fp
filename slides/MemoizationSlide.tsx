@@ -1,7 +1,7 @@
 import * as React from 'react'
-import SlideData from '../components/SlideData'
+import SlideData from '@alvaroc1/present/components/SlideData'
 import Base from '../parts/Base'
-import Snippet from '../components/Snippet'
+import Snippet from '@alvaroc1/present/components/Snippet'
 import { readFileSync } from 'fs'
 
 const code = readFileSync(__dirname + '/../snippets/memoization.sc', 'utf8')

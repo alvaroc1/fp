@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Slide from '../components/Slide'
+import Slide from '@alvaroc1/present/components/Slide'
 import Background from './Background'
 import mathbg from '../mathbg.jpg'
 

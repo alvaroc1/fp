@@ -1,7 +1,7 @@
 import * as React from 'react'
-import SlideData from '../components/SlideData'
-import Stepper from '../components/Stepper'
-import Snippet from '../components/Snippet'
+import SlideData from '@alvaroc1/present/components/SlideData'
+import Stepper from '@alvaroc1/present/components/Stepper'
+import Snippet from '@alvaroc1/present/components/Snippet'
 import { readFileSync } from 'fs'
 import Base from '../parts/Base'
 

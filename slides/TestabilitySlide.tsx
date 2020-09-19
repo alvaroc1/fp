@@ -1,7 +1,7 @@
 import * as React from 'react'
-import SlideData from '../components/SlideData'
+import SlideData from '@alvaroc1/present/components/SlideData'
 import Base from '../parts/Base'
-import Stepper from '../components/Stepper'
+import Stepper from '@alvaroc1/present/components/Stepper'
 
 export default SlideData.create({
   elements: {

@@ -1,9 +1,9 @@
 import * as React from 'react'
-import SlideData from '../components/SlideData'
+import SlideData from '@alvaroc1/present/components/SlideData'
 import { createStyles, withStyles, WithStyles } from '@material-ui/styles'
 import 'typeface-roboto'
 import 'typeface-montserrat'
-import Center from '../layout/Center'
+import Center from '@alvaroc1/present/layout/Center'
 import Base from '../parts/Base'
 
 const styles = createStyles({

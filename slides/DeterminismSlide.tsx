@@ -1,8 +1,8 @@
 import * as React from 'react'
-import SlideData from '../components/SlideData'
+import SlideData from '@alvaroc1/present/components/SlideData'
 import Base from '../parts/Base'
-import Stepper from '../components/Stepper'
-import Snippet from '../components/Snippet'
+import Stepper from '@alvaroc1/present/components/Stepper'
+import Snippet from '@alvaroc1/present/components/Snippet'
 import { readFileSync } from 'fs'
 
 const badCode = readFileSync(__dirname + '/../snippets/determinism-bad.sc', 'utf8')

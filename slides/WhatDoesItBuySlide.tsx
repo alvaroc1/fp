@@ -1,7 +1,7 @@
 import * as React from 'react'
-import SlideData from '../components/SlideData'
-import Heading from '../ui/Heading'
-import Center from '../layout/Center'
+import SlideData from '@alvaroc1/present/components/SlideData'
+import Heading from '@alvaroc1/present/ui/Heading'
+import Center from '@alvaroc1/present/layout/Center'
 import Base from '../parts/Base'
 
 export default SlideData.create({

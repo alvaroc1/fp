@@ -1,9 +1,9 @@
 import * as React from 'react'
-import SlideData from '../components/SlideData'
+import SlideData from '@alvaroc1/present/components/SlideData'
 import Base from '../parts/Base'
-import Stepper from '../components/Stepper'
+import Stepper from '@alvaroc1/present/components/Stepper'
 import { readFileSync } from 'fs'
-import Snippet from '../components/Snippet'
+import Snippet from '@alvaroc1/present/components/Snippet'
 
 const codeStyle: React.CSSProperties = {
   background: 'rgba(0,0,0,.4)',

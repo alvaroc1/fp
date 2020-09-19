@@ -1,8 +1,8 @@
 import * as React from 'react'
-import SlideData from "../components/SlideData"
-import Stepper from "../components/Stepper"
-import Center from '../layout/Center'
-import TextStrike from '../ui/TextStrike'
+import SlideData from '@alvaroc1/present/components/SlideData'
+import Stepper from '@alvaroc1/present/components/Stepper'
+import Center from '@alvaroc1/present/layout/Center'
+import TextStrike from '@alvaroc1/present/ui/TextStrike'
 import Base from '../parts/Base'
 
 const possibilities = [
